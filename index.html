@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#09090B">
+  <meta name="description" content="Hay fechas que tienen fama de traer mala suerte. La mía tiene tu nombre, Vivi.">
+  <meta name="format-detection" content="telephone=no">
+  <title>Viernes 13. Mi buena suerte eres tú.</title>
+
+  <meta property="og:title" content="Viernes 13. Mi buena suerte eres tú.">
+  <meta property="og:description" content="Hay fechas que tienen fama de traer mala suerte. La mía tiene tu nombre, Vivi.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_ES">
+  <meta property="og:url" content="https://yorusaurio.github.io/viernes-13/">
+  <meta property="og:image" content="https://yorusaurio.github.io/viernes-13/assets/images/og.jpg">
+  <meta property="og:image:type" content="image/jpeg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Viernes 13. Mi buena suerte eres tú.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Viernes 13. Mi buena suerte eres tú.">
+  <meta name="twitter:description" content="Hay fechas que tienen fama de traer mala suerte. La mía tiene tu nombre, Vivi.">
+  <meta name="twitter:image" content="https://yorusaurio.github.io/viernes-13/assets/images/og.jpg">
+
+  <link rel="icon" href="assets/images/favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://open.spotify.com">
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,620;1,9..144,500;1,9..144,620&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/player.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <script>document.documentElement.classList.add("js");</script>
+</head>
+<body>
+  <a class="skip" href="#cancion">Saltar al contenido</a>
+  <div class="atmosphere" aria-hidden="true"></div>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="scroll-progress" aria-hidden="true"><span id="scroll-bar"></span></div>
+
+  <section class="intro" id="intro" aria-labelledby="intro-title">
+    <div class="intro__top">
+      <span>13.11.2026</span>
+      <span>Para Vivi</span>
+    </div>
+
+    <div class="intro__center">
+      <h1 id="intro-title">
+        <span class="intro-word">Viernes</span>
+        <span class="intro-number">13<span class="glint" aria-hidden="true"></span></span>
+      </h1>
+      <div class="intro-copy">
+        <p>Hay fechas que tienen fama de traer mala suerte...</p>
+        <p>Y otras que tienen a alguien que las hace especiales.</p>
+      </div>
+    </div>
+
+    <div class="intro__bottom">
+      <button class="discover" id="discover" type="button">Descubrir</button>
+    </div>
+  </section>
+
+  <main id="experience" aria-hidden="true">
+    <header class="topbar">
+      <span>Viernes 13</span>
+      <span>Mi buena suerte eres tú</span>
+    </header>
+
+    <section class="section player" id="cancion" aria-labelledby="player-title">
+      <p class="kicker reveal">02 <span>La música</span></p>
+      <div class="player__layout">
+        <div class="player__stage reveal" style="--d:1">
+          <div class="cover-glow" aria-hidden="true"></div>
+          <figure class="cover">
+            <img
+              id="cover"
+              src="assets/images/cover.jpg"
+              alt="Portada de Viernes 13, de Marcos Menchaca"
+              width="500"
+              height="500"
+              fetchpriority="high">
+            <div class="cover-fallback" id="cover-fallback" hidden>
+              <span>Viernes 13</span>
+            </div>
+          </figure>
+        </div>
+
+        <div class="player__copy">
+          <p class="eyebrow reveal" style="--d:2">Para Vivi</p>
+          <h2 id="player-title" class="reveal" style="--d:2">Viernes 13</h2>
+          <p class="artist reveal" style="--d:3">Marcos Menchaca</p>
+          <p class="track-meta reveal" style="--d:3">2019 · Canción</p>
+          <p class="lede reveal" style="--d:4">Una canción que tenía que dedicarte.</p>
+
+          <div class="transport reveal" id="transport" style="--d:5">
+            <p class="now" id="now-playing" hidden>
+              <span class="wave" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span>
+              <span>Reproduciendo</span>
+            </p>
+
+            <div class="transport__row">
+              <button class="play-btn" id="play" type="button" disabled aria-label="Reproducir Viernes 13" aria-pressed="false">
+                <svg class="icon-play" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path fill="currentColor" d="M8.2 5.4v13.2L19 12 8.2 5.4z"/></svg>
+                <svg class="icon-pause" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path fill="currentColor" d="M6.5 5h3.4v14H6.5zM14.1 5H17.5v14h-3.4z"/></svg>
+              </button>
+              <button class="ghost-btn" id="restart" type="button" disabled aria-label="Reiniciar canción">
+<svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+                <path fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" d="M19 7.2A8 8 0 1 1 17.2 5"/>
+                <path fill="currentColor" d="M16.2 2.4v5.4h-5.2z"/>
+              </svg>
+              </button>
+            </div>
+
+            <div class="seek-wrap">
+              <div class="seek-visual" aria-hidden="true">
+                <span class="seek-fill"></span>
+                <span class="seek-thumb"></span>
+              </div>
+              <label class="sr-only" for="seek">Progreso de la canción</label>
+              <input id="seek" type="range" min="0" max="1000" value="0" step="1" disabled aria-valuemin="0" aria-valuemax="1000" aria-valuenow="0" aria-valuetext="0 minutos 0 segundos">
+            </div>
+            <div class="times">
+              <span id="time-current">0:00</span>
+              <span id="time-duration">–:––</span>
+            </div>
+
+            <div class="volume" id="volume-control" hidden>
+              <label class="volume__label" for="volume">Volumen</label>
+              <input id="volume" type="range" min="0" max="1" step="0.01" value="1" aria-valuemin="0" aria-valuemax="100" aria-valuenow="100" aria-valuetext="Volumen 100 por ciento">
+            </div>
+
+            <p class="player-status" id="player-status" role="status">Preparando el reproductor…</p>
+          </div>
+
+          <div class="embed-shell reveal" id="embed-shell" style="--d:6">
+            <p class="embed-label">Reproductor oficial de Spotify</p>
+            <div class="embed-frame" id="embed-slot">
+              <div id="embed-iframe"></div>
+            </div>
+            <a class="text-link" id="spotify-link" href="https://open.spotify.com/track/1qXYKmTTd4e0YdugtGmb5R" target="_blank" rel="noopener noreferrer">Abrir en Spotify</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section letter" id="dedicatoria" aria-labelledby="letter-title">
+      <p class="kicker reveal">03 <span>La dedicatoria</span></p>
+      <div class="letter__grid">
+        <div>
+          <h2 id="letter-title" class="reveal" style="--d:1">¿Por qué esta canción?</h2>
+          <div class="letter__body">
+            <p class="reveal" style="--d:2">Porque hay algo que quiero que sepas...</p>
+            <p class="reveal" style="--d:3">No sé cuántos viernes 13 nos esperan, ni qué cosas nos tendrá preparadas la vida.</p>
+            <p class="reveal" style="--d:4">Pero sí sé algo: me gusta imaginar todos esos días contigo.</p>
+            <p class="reveal" style="--d:5">Me gusta pensar en todo lo que todavía nos falta vivir, en los planes que tenemos pendientes, en las risas, en nuestras ocurrencias y hasta en esas pequeñas cosas que hacen que seas tú.</p>
+            <p class="reveal" style="--d:6">Y si pudiera elegir a alguien con quien compartir todos esos momentos, volvería a elegirte.</p>
+          </div>
+        </div>
+        <blockquote class="pull reveal" style="--d:3">
+          <p>
+            <span class="pull__mark" aria-hidden="true">«</span>
+            <span style="--d:0">Tú pones</span>
+            <span style="--d:1">buena suerte</span>
+            <span style="--d:2">en mi viernes 13.</span>
+          </p>
+        </blockquote>
+      </div>
+    </section>
+
+    <section class="section album" id="album" aria-labelledby="album-title">
+      <p class="kicker reveal">04 <span>Los recuerdos</span></p>
+      <h2 id="album-title" class="reveal" style="--d:1">Y si algo me gusta más que esta canción...</h2>
+      <p class="album__sub reveal" style="--d:2">Son todos los recuerdos que voy construyendo contigo.</p>
+
+      <!--
+        Para cambiar una foto, sustituye el archivo con el mismo nombre
+        en assets/images/memories/. No hace falta tocar esta página.
+      -->
+      <div class="album-grid">
+        <figure class="memory memory--1 memory--instant reveal" style="--tilt:-1.6deg; --d:1">
+          <button class="memory__open" type="button" data-note="Mi lugar favorito" data-label="Fotografía 1" aria-label="Ampliar fotografía 1. Mi lugar favorito">
+            <span class="memory__mat">
+              <img src="assets/images/memories/photo-01.jpg" alt="" loading="lazy" decoding="async">
+              <span class="memory__note">Mi lugar favorito</span>
+            </span>
+          </button>
+        </figure>
+
+        <figure class="memory memory--2 memory--instant reveal" style="--tilt:2.2deg; --d:2">
+          <button class="memory__open" type="button" data-note="Qué bonito coincidir contigo" data-label="Fotografía 2" aria-label="Ampliar fotografía 2. Qué bonito coincidir contigo">
+            <span class="memory__mat">
+              <img src="assets/images/memories/photo-02.jpg" alt="" loading="lazy" decoding="async">
+              <span class="memory__note">Qué bonito coincidir contigo</span>
+            </span>
+          </button>
+        </figure>
+
+        <figure class="memory memory--3 memory--print reveal" style="--tilt:-2.4deg; --d:3">
+          <button class="memory__open" type="button" data-note="Tú y yo" data-label="Fotografía 3" aria-label="Ampliar fotografía 3. Tú y yo">
+            <span class="memory__mat">
+              <img src="assets/images/memories/photo-03.jpg" alt="" loading="lazy" decoding="async">
+            </span>
+            <span class="memory__note">Tú y yo</span>
+          </button>
+        </figure>
+
+        <figure class="memory memory--4 memory--print reveal" style="--tilt:0.8deg; --d:2">
+          <button class="memory__open" type="button" data-note="" data-label="Fotografía 4" aria-label="Ampliar fotografía 4">
+            <span class="memory__mat">
+              <img src="assets/images/memories/photo-04.jpg" alt="" loading="lazy" decoding="async">
+            </span>
+          </button>
+        </figure>
+
+        <figure class="memory memory--5 memory--instant reveal" style="--tilt:1.8deg; --d:4">
+          <button class="memory__open" type="button" data-note="Un recuerdo más" data-label="Fotografía 5" aria-label="Ampliar fotografía 5. Un recuerdo más">
+            <span class="memory__mat">
+              <img src="assets/images/memories/photo-05.jpg" alt="" loading="lazy" decoding="async">
+              <span class="memory__note">Un recuerdo más</span>
+            </span>
+          </button>
+        </figure>
+
+        <figure class="memory memory--6 memory--print reveal" style="--tilt:-0.6deg; --d:1">
+          <button class="memory__open" type="button" data-note="" data-label="Fotografía 6" aria-label="Ampliar fotografía 6">
+            <span class="memory__mat">
+              <img src="assets/images/memories/photo-06.jpg" alt="" loading="lazy" decoding="async">
+            </span>
+          </button>
+        </figure>
+
+        <figure class="memory memory--7 memory--instant reveal" style="--tilt:-2deg; --d:3">
+          <button class="memory__open" type="button" data-note="Mi persona favorita" data-label="Fotografía 7" aria-label="Ampliar fotografía 7. Mi persona favorita">
+            <span class="memory__mat">
+              <img src="assets/images/memories/photo-07.jpg" alt="" loading="lazy" decoding="async">
+              <span class="memory__note">Mi persona favorita</span>
+            </span>
+          </button>
+        </figure>
+
+        <figure class="memory memory--8 memory--print reveal" style="--tilt:1.4deg; --d:2">
+          <button class="memory__open" type="button" data-note="" data-label="Fotografía 8" aria-label="Ampliar fotografía 8">
+            <span class="memory__mat">
+              <img src="assets/images/memories/photo-08.jpg" alt="" loading="lazy" decoding="async">
+            </span>
+          </button>
+        </figure>
+
+        <figure class="memory memory--9 memory--print reveal" style="--tilt:-1.1deg; --d:4">
+          <button class="memory__open" type="button" data-note="Ojalá repetirlo mil veces" data-label="Fotografía 9" aria-label="Ampliar fotografía 9. Ojalá repetirlo mil veces">
+            <span class="memory__mat">
+              <img src="assets/images/memories/photo-09.jpg" alt="" loading="lazy" decoding="async">
+            </span>
+            <span class="memory__note">Ojalá repetirlo mil veces</span>
+          </button>
+        </figure>
+
+        <figure class="memory memory--10 memory--instant reveal" style="--tilt:2.5deg; --d:3">
+          <button class="memory__open" type="button" data-note="" data-label="Fotografía 10" aria-label="Ampliar fotografía 10">
+            <span class="memory__mat">
+              <img src="assets/images/memories/photo-10.jpg" alt="" loading="lazy" decoding="async">
+            </span>
+          </button>
+        </figure>
+      </div>
+
+      <p class="album-close reveal">«Y todavía nos quedan muchísimas fotos por tomar»</p>
+    </section>
+
+    <section class="proposal" id="pregunta" aria-labelledby="question-title">
+      <div class="proposal__inner">
+        <p class="kicker kicker--center reveal">05 <span>La pregunta</span></p>
+        <div class="proposal__lead">
+          <p class="reveal" style="--d:1">Y tengo una pequeña propuesta para ti...</p>
+          <p class="reveal" style="--d:2">Quiero estar contigo este viernes 13.</p>
+          <p class="reveal" style="--d:3">Y también el próximo.</p>
+          <p class="reveal" style="--d:4">Y todos los demás que nos queden.</p>
+          <p class="reveal proposal__soft" style="--d:5">Porque si hay algo que tengo claro, es que no necesito que todos los días sean perfectos.</p>
+          <p class="reveal proposal__soft" style="--d:6">Solo quiero seguir compartiéndolos contigo.</p>
+        </div>
+
+        <h2 id="question-title" class="reveal" style="--d:7">¿Me acompañas en todos nuestros viernes 13?</h2>
+
+        <div class="proposal-actions reveal" id="proposal-actions" style="--d:8">
+          <button class="btn btn-yes" id="yes" type="button">Obviamente, sí ♡</button>
+          <button class="btn btn-no" id="no" type="button" aria-expanded="false" aria-controls="joke">¿Tengo otra opción?</button>
+        </div>
+        <p class="joke" id="joke" role="status" hidden>Jajaja, creo que sabes cuál es la respuesta correcta.</p>
+
+        <div class="promise" id="promise" hidden tabindex="-1">
+          <h3>Entonces queda prometido.</h3>
+          <p>Este viernes 13 y todos los que vengan.</p>
+          <p class="promise__always">Contigo, siempre.</p>
+          <p class="promise__sign">Con cariño, para mi Vivi. ♡</p>
+        </div>
+      </div>
+    </section>
+
+    <footer class="colophon">
+      <p>Para Vivi · 13 de noviembre de 2026</p>
+    </footer>
+  </main>
+
+  <dialog class="lightbox" id="lightbox" aria-label="Fotografía ampliada">
+    <button class="lightbox__close" id="lightbox-close" type="button" aria-label="Cerrar fotografía">
+      <span aria-hidden="true"></span>
+    </button>
+    <button class="lightbox__nav lightbox__prev" id="lightbox-prev" type="button" aria-label="Fotografía anterior"></button>
+    <figure class="lightbox__figure">
+      <img id="lightbox-img" alt="" width="1200" height="1500">
+      <figcaption id="lightbox-caption"></figcaption>
+    </figure>
+    <button class="lightbox__nav lightbox__next" id="lightbox-next" type="button" aria-label="Fotografía siguiente"></button>
+  </dialog>
+
+  <div class="celebration" id="celebration" aria-hidden="true"></div>
+
+  <noscript>
+    <style>
+      .intro { display: none; }
+      #experience { transform: none; }
+    </style>
+  </noscript>
+
+  <script src="js/animations.js" defer></script>
+  <script src="js/gallery.js" defer></script>
+  <script src="js/player.js" defer></script>
+  <script src="js/interactions.js" defer></script>
+  <script src="js/main.js" defer></script>
+</body>
+</html>
